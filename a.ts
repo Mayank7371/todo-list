@@ -23,3 +23,11 @@ function isLegal(age: number): any {
 }
 const answer = isLegal(21);
 console.log(answer);
+
+function delayedCall(fn: () => void) {
+  setTimeout(fn, 1000);
+}
+function fn() {
+  console.log("this will be executed after 1 second");
+}
+delayedCall(fn);
