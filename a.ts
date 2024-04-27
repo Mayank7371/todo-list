@@ -31,3 +31,24 @@ function fn() {
   console.log("this will be executed after 1 second");
 }
 delayedCall(fn);
+//interface
+interface User {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
+
+function isLegal(user: User): boolean {
+  if (user.age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+const value = isLegal({
+  firstName: "mayank",
+  lastName: "kumar",
+  age: 22,
+});
+console.log(value);
+
